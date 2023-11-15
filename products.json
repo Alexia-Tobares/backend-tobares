@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "title": "producto prueba",
+    "description": "Este es un producto nuevo",
+    "price": 5000,
+    "thumbnail": "Sin imagen",
+    "code": "aoc123",
+    "stock": 25
+  }
+]
