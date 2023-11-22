@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Balada de pajaros cantores y serpientes",
+    "description": "Autor/a: Suzanne Collins",
+    "price": 17600,
+    "thumbnail": "https://data.livriz.com/rest/api/mediafile/getimagesecure/?url=https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/93264a2c-faac-4440-8573-db947fbedda2/9789878120249.jpg",
+    "code": "aoc123",
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "title": "La mujer que soy",
+    "description": "Autor/a: Britney Spears",
+    "price": 8999,
+    "thumbnail": "https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/da4a2352-43bb-47cd-91ed-c7f70d77d7ac/9789506446994_9545757a-b92c-4550-a819-d4d2a2d538be.jpg",
+    "code": "aoc124",
+    "stock": 18
+  },
+  {
+    "id": 3,
+    "title": "El hombre en busca de sentido",
+    "description": "Autor/a: Victor E. Frankl",
+    "price": 7590,
+    "thumbnail": "https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/ee241f77-b7ca-404e-81e6-87d8c72a7db2/a12e0590-07de-49b1-b60d-2e2963fd90dc.jpg",
+    "code": "aoc125",
+    "stock": 30
+  },
+  {
+    "id": 4,
+    "title": "Gaturro de oro 3",
+    "description": "Autor/a: Nick",
+    "price": 5999,
+    "thumbnail": "https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/7b55a7d8-b39e-47f5-9a7d-7645c81b85e8/9789500769785_695a2713-aebc-43ec-b833-96e296e1ff06.jpg",
+    "code": "aoc126",
+    "stock": 25
+  },
+  {
+    "id": 5,
+    "title": "Mis dias en la libreria Morisaki",
+    "description": "Autor/a: Satoshi Yagisawa",
+    "price": 7590,
+    "thumbnail": "https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/b021b2ff-1d8c-4a34-995f-f9f2f9bf9753/9789874892508.jpg",
+    "code": "aoc127",
+    "stock": 15
+  },
+  {
+    "id": 6,
+    "title": "Holly",
+    "description": "Autor/a: Stephen King",
+    "price": 18999,
+    "thumbnail": "https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/42e1c133-9442-4f44-9531-c0e8d23fcf09/9789506446949.jpg",
+    "code": "aoc128",
+    "stock": 50
+  },
+  {
+    "id": 7,
+    "title": "El camino del artista",
+    "description": "Autor/a: Julia Cameron",
+    "price": 13899,
+    "thumbnail": "https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/396960e6-c92a-4a49-862a-428aae0837f9/9789877352306.jpg",
+    "code": "aoc129",
+    "stock": 35
+  },
+  {
+    "id": 8,
+    "title": "Los chicos de Biloxi",
+    "description": "Autor/a: John Grisham",
+    "price": 17590,
+    "thumbnail": "https://data.livriz.com/rest/api/mediafile/getimagesecure/?url=https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/914714dd-de71-439d-b473-f78f4d71e6f0/9789506446970.jpg",
+    "code": "aoc130",
+    "stock": 2
+  },
+  {
+    "id": 9,
+    "title": "El nudo",
+    "description": "Autor/a: Carlos Pagni",
+    "price": 17000,
+    "thumbnail": "https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/f2dbcd36-3a69-4939-bbf7-4f713be0a0df/9ace1aa4-4d60-4758-aed5-46dfdcaa0294.jpg",
+    "code": "aoc131",
+    "stock": 8
+  },
+  {
+    "id": 10,
+    "title": "La paciente silenciosa",
+    "description": "Autor/a: Alex Michaelides",
+    "price": 12999,
+    "thumbnail": "https://data.livriz.com/rest/api/mediafile/getimagesecure/?url=https://data.livriz.com/media/MediaSpace/F9AFB48D-741D-4834-B760-F59344EEFF34/45/52597f0a-f71b-4a29-99a3-8c933cdf5746/9789877388534.jpg",
+    "code": "aoc132",
+    "stock": 25
+  }
+]

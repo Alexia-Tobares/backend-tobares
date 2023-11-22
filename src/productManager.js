@@ -7,8 +7,11 @@ class ProductManager{
         this.path = path
     }
     
-    getProducts(){
-        console.log(this.products)
+   async getProducts(){
+        let productsInFile = await fs.promises.readFile('products.json', 'utf-8')
+        productsInFile = JSON.parse(productsInFile)
+        console.log(productsInFile)
+        return productsInFile
     }
 
     async addProduct(title, description, price, thumbnail, code, stock){
@@ -26,7 +29,7 @@ class ProductManager{
         let productsEnArchivo = await fs.promises.readFile('products.json', 'utf-8')
         productsEnArchivo = JSON.parse(productsEnArchivo)
         const searchedProduct = productsEnArchivo.find((element)=> element.id === id)
-        searchedProduct ? console.log(searchedProduct) : console.error('Error! No se ha encontrado el producto')
+        return searchedProduct ? console.log(searchedProduct) : console.error('Error! No se ha encontrado el producto')
     }
 
     async updateProduct(id, updatedFields) {
@@ -63,16 +66,4 @@ class ProductManager{
 }
 
 
- async function cosasAsincronas(){
-    const product = new ProductManager()
-    product.getProducts()
-    await product.addProduct('producto prueba', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25)
-    product.getProducts()
-    await product.addProduct('producto prueba', 'Este es un producto nuevo', 300, 'Sin imagen', 'aoc123', 25)
-    await product.getProductById(1)
-    await product.updateProduct(1, { price: 5000 })
-    await product.deleteProduct(0)
-}
-
-
-cosasAsincronas()
+module.exports = ProductManager;
