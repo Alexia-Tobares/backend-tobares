@@ -29,7 +29,7 @@ class ProductManager{
         let productsEnArchivo = await fs.promises.readFile('products.json', 'utf-8')
         productsEnArchivo = JSON.parse(productsEnArchivo)
         const searchedProduct = productsEnArchivo.find((element)=> element.id === id)
-        return searchedProduct ? console.log(searchedProduct) : console.error('Error! No se ha encontrado el producto')
+        return searchedProduct ? searchedProduct : console.error('Error! No se ha encontrado el producto')
     }
 
     async updateProduct(id, updatedFields) {
