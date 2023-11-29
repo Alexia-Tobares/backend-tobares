@@ -6,6 +6,10 @@ const ProductManager = require("../managers/productManager");
 
  router
     .get('/', async(req, res)=>{
+        const limit = req.query.limit;
+        if(limit){
+            return res.json(products.slice(0, limit))
+        }
         const products = await productService.getProducts()
         res.send({status:'succes', payload: products})
     })
@@ -18,19 +22,32 @@ const ProductManager = require("../managers/productManager");
         res.send({status:'succes', payload: product})
     })
 
-    .post('/', async(req, res)=>{
-        const product = req.body
-        res.send('post product')
+    .post('/', (req, res) => {
+        const { title, description, price, thumbnail, code, stock} = req.body;
+
+        productService.addProduct(title, description, price, thumbnail, code, stock);
+        res.json({ message: 'Producto agregado con éxito.' });
     })
 
-    .put('/:pid', async(req, res)=>{
-        const {pid} = req.params
-        res.send('put product' + pid)
+    .put('/:id', (req, res) => {
+        const productId = parseInt(req.params.id);
+        if (isNaN(productId)) {
+            return res.status(400).json({ error: 'ID no válido.' });
+        }
+
+        const updatedProductData = req.body;
+
+        productService.updateProduct(productId, updatedProductData);
+        res.json({ message: `Producto con ID ${productId} actualizado con éxito.` });
     })
 
-    .delete('/:pid', async(req, res)=>{
-        const {pid} = req.params
-        res.send('delete product' + pid)
+    .delete('/:id', (req, res) => {
+        const productId = parseInt(req.params.id);
+        if (isNaN(productId)) {
+            return res.status(400).json({ error: 'ID no válido.' });
+        }
+        res.json(productService.deleteProduct(productId));
+
     })
 
  module.exports = router;
