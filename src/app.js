@@ -1,11 +1,13 @@
 const express = require('express')
-const ProductManager = require('./productManager')
+const ProductManager = require('./managers/productManager')
 const app = express()
+
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-const productManager = new ProductManager("./src/products.json");
+const productsRouter = require('./routes/products.router.js')
 
-app.get('/products', async(req, res) => {
+/* app.get('/products', async(req, res) => {
     const limit = req.query.limit;
     const products = await productManager.getProducts();
 
@@ -20,7 +22,13 @@ app.get('/products/:pid',async (req, res) => {
     product ? res.json(product) : res.status(404).json({ error: 'Producto no encontrado o inexistente' })
     
   })
+ */
 
+app.use('/api/products', productsRouter)
+
+app.use('/api/carts', (req, res) =>{
+  res.send('hola carts')
+})
 
 app.listen(8080, () => {
   console.log(`Example app listening on port 8080`)
