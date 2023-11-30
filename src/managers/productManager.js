@@ -4,11 +4,11 @@ class ProductManager{
     products = []
     id = 0
     constructor(path){
-        this.path = path
+        this.path = './src/mockDB/products.json'
     }
     
    async getProducts(){
-        let productsInFile = await fs.promises.readFile('products.json', 'utf-8')
+        let productsInFile = await fs.promises.readFile(this.path, 'utf-8')
         productsInFile = JSON.parse(productsInFile)
         console.log(productsInFile)
         return productsInFile

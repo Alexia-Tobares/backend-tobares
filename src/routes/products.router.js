@@ -2,15 +2,15 @@ const { Router } = require("express") ;
 const ProductManager = require("../managers/productManager");
 
  const router = Router();
- const productService = new ProductManager('/src/mockDB/products.json')
+ const productService = new ProductManager('./mockDB/products.json')
 
  router
     .get('/', async(req, res)=>{
         const limit = req.query.limit;
+        const products = await productService.getProducts()
         if(limit){
             return res.json(products.slice(0, limit))
         }
-        const products = await productService.getProducts()
         res.send({status:'succes', payload: products})
     })
     .get('/:pid', async(req, res)=>{
