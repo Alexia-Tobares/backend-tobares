@@ -1,5 +1,5 @@
 const { Router } = require("express") ;
-const ProductManager = require("../managers/productManager");
+const ProductManager = require("../../managers/productManager");
 
  const router = Router();
  const productService = new ProductManager('./mockDB/products.json')
@@ -13,14 +13,16 @@ const ProductManager = require("../managers/productManager");
         }
         res.send({status:'succes', payload: products})
     })
-    .get('/:pid', async(req, res)=>{
-        const {pid} = parseInt(req.params)
-        const product = await productService.getProductById(pid)
-        if(!product){
-            return res.status(400).send({status: 'error', message: 'Producto no encontrado o inexistente'})
+    
+    .get("/:pid", async (req, res) => {
+        try {
+          const id = parseInt(req.params.pid);
+          const product = await productService.getProductById(id);
+          res.status(200).json({ status: "ok", data: product });
+        } catch (error) {
+          res.status(404).json({ status: "error", message: error.message });
         }
-        res.send({status:'succes', payload: product})
-    })
+      })
 
     .post('/', (req, res) => {
         const { title, description, price, thumbnail, code, stock} = req.body;
